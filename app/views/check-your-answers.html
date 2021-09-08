@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your details</h1>
+
+      <h2 class="govuk-heading-m">Equality, Diversity and Inclusion details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            10 2 1979
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+            <a href="Age">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Disability, illness or conditions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Prefer not to say
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="Disability">
+              Change
+              <span class="govuk-visually-hidden"> Ethnicity</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Ethnicity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Asian/Indian</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="Ethnicity">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+      </dl>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Sex and Gender identity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Male
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="Sex">
+              Change
+              <span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Sexual orientation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Heterosexual
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="Assignment">
+              Change
+              <span class="govuk-visually-hidden"> Sexual orientation</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Religion
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Muslim
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="religion">
+              Change
+              <span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Occupation of household
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Traditional professional occupations
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="socio">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Relationship status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Single
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="marriage">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Caring responsibilities
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="caring">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Qualifications
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Master’s degree
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="education">
+              Change
+              <span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Now submit your details</h2>
+
+      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

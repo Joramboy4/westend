@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="religion">Back</a>
+{% endblock %}
+
+{% block content %}
+<form class="form" action="marriage" method="post">
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What was the occupation of your main household earner when you were aged 14?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="none">
+        <label class="govuk-label govuk-radios__label" for="religion">
+          Clerical and intermediate occupations
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, personal assistant, clerical worker, call centre agent, nursing auxiliary.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="christian" aria-describedby="religion-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="religion-2">
+          Long-term unemployed
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          Claimed Jobseeker's Allowance or earlier unemployment benefit for more than a year.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-3" name="religion" type="radio" value="buddhist">
+        <label class="govuk-label govuk-radios__label" for="religion-3">
+          Middle or junior managers
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, office/retail/bank/restaurant/warehouse manager, publican.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-4" name="religion" type="radio" value="hindu">
+        <label class="govuk-label govuk-radios__label" for="religion-4">
+          Modern professional occupations
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, teacher/lecturer, nurse, social worker, artist, police officer (sergeant or above), software designer.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-5" name="religion" type="radio" value="jewish">
+        <label class="govuk-label govuk-radios__label" for="religion-5">
+          Semi-routine manual and service occupations
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, postal worker, machine operative, security guard, caretaker, farm worker, receptionist.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="religion-5" name="religion" type="radio" value="jewish">
+      <label class="govuk-label govuk-radios__label" for="religion-5">
+          Retired
+        </label>
+
+   </div>
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="religion-5" name="religion" type="radio" value="jewish">
+      <label class="govuk-label govuk-radios__label" for="religion-5">
+         Routine manual and service occupations
+       </label>
+    <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+         For example, HGV driver, cleaner, porter, labourer, waiter / waitress, bar staff.
+    </div>
+    </div>
+   <div class="govuk-radios__item">
+   <input class="govuk-radios__input" id="religion-6" name="religion" type="radio" value="muslim">
+   <label class="govuk-label govuk-radios__label" for="religion-6">
+        Senior managers or administrators usually responsible for planning, organising and co-ordinating work and for finance
+   </label>
+   <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+        For example, finance manager, chief executive.
+   </div>
+  </div>
+  <div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="sikh">
+  <label class="govuk-label govuk-radios__label" for="religion-7">
+          Technical and craft occupations
+  </label>
+  <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+       For example, motor mechanic, inspector, plumber, electrician, gardener, train driver.
+  </div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="sikh">
+<label class="govuk-label govuk-radios__label" for="religion-7">
+        Traditional professional occupations
+</label>
+<div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+     For example, accountant, solicitor, civil/mechanical engineer.
+</div>
+      </div>
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="religion-8" name="religion" type="radio" value="other" data-aria-controls="conditional-religion-8">
+        <label class="govuk-label govuk-radios__label" for="religion-8">
+          Other
+        </label>
+  </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-religion-8">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-description">
+            Specify the occupation (optional)
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="other-description" name="other-description" type="text"></div>
+        </div>
+        <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="sikh">
+        <label class="govuk-label govuk-radios__label" for="religion-7">
+                Don’t know
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="religion-7" name="religion" type="radio" value="sikh">
+      <label class="govuk-label govuk-radios__label" for="religion-7">
+              Not applicable
+      </label>
+  </div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="religion-10" name="religion" type="radio" value="skip">
+        <label class="govuk-label govuk-radios__label" for="religion-10">
+          Prefer not to say
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+<div class="govuk-inset-text">
+  This will help give us an indication of the diversity of applicants. We recognise that a single question cannot define a person’s socioeconomic status, but will instead provide an indication.
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+{% endblock %}

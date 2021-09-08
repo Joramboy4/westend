@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/Caring">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "countries",
+  name: "countries",
+  fieldset: {
+    legend: {
+      text: "Which educational qualifications have you obtained?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select all qualifications that apply"
+  },
+  items: [
+    {
+      value: "france",
+      text: "Apprenticeship"
+    },
+    {
+      value: "portugal",
+      text: "AS, A level or equivalent"
+    },
+
+    {
+      value: "spain",
+      text: "Bachelor’s degree"
+    },
+    {
+      value: "spain",
+      text: "Doctoral degree"
+    },
+    {
+      value: "spain",
+      text: "GCSEs or equivalent"
+    },
+    {
+      value: "spain",
+      text: "Master’s degree"
+    },
+    {
+      value: "spain",
+      text: "NVQ or equivalent"
+  
+    },
+    {
+      value: "spain",
+      text: "Any other formal qualifications"
+    },
+
+    {
+      divider: "or"
+    },
+    {
+      value: "none",
+      text: "Prefer not to say",
+      behaviour: "exclusive"
+    }
+  ]
+}) }}
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="govuk-inset-text">
+          This will help us identify any disproportionately under-represented groups.         </div>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+      text: "Save and continue"
+      }) }}
+
+{% endblock %}

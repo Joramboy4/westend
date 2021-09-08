@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="Disability">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+            {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+      {{ govukCheckboxes({
+        idPrefix: "countries",
+        name: "countries",
+        fieldset: {
+          legend: {
+            text: "Which of the following conditions, illness or disabilities do you have?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Tick all that apply"
+        },
+        items: [
+          {
+            value: "france",
+            text: "Blind/Partially sighted"
+          },
+          {
+            value: "portugal",
+            text: "Deaf/Hearing impairment"
+          },
+
+          {
+            value: "spain",
+            text: "Dyslexia, dyscalculia, dyspraxia or dysgraphia"
+          },
+          {
+            value: "spain",
+            text: "Long-term health condition or chronic disease
+            (Conditions that are managed with drugs and other treatment, for example: diabetes, chronic obstructive pulmonary disease, arthritis and hypertension.)"
+          },
+          {
+            value: "spain",
+            text: "Mental health condition (Mental health conditions affect the way you think, feel and behave, for example: depression, anxiety, schizophrenia, bipolar disorder.)"
+          },
+          {
+            value: "spain",
+            text: "Mobility or musculoskeletal condition (Conditions that affect the way you move)"
+          },
+          {
+            value: "spain",
+            text: "Neurodivergent
+            (A relatively new term, neurodivergent means someone who thinks differently from the way the majority referred to as neurotypical expect, for example: autism or ADHD.)"
+          },
+          {
+            value: "spain",
+            text: "Prefer to self-describe"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "none",
+            text: "Prefer not to say",
+            behaviour: "exclusive"
+          }
+        ]
+      }) }}
+            <form class="form" action="/Ethnicity" method="post">
+              <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+              </button>
+                    </form>
+
+                  </div>
+
+
+    </div>
+
+
+      {% endblock %}

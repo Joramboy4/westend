@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+      {% if serviceName %} {{ serviceName }} {% endif %}
+    </h1>
+
+    <h2 class="govuk-heading-m">Why does Innovate UK ask for personal data?</h2>
+    <p>By answering these questions you’re helping us to ensure Innovate UK’s as inclusive as possible and treating everyone fairly. It should take you no more than 10 minutes.</p>
+    <p>By embedding equality, diversity and inclusion in everything we do, we maximise the impact of our funding. The benefits of this are that:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Everything we fund embraces a diversity of thought, people and ideas</li>
+<li>A wide range of innovators have access to the Innovate UK resources, advice and opportunities they need to succeed</li>
+<li>All parts of society benefit.</li>
+</ul>
+<p>The information you give us will be part of your Innovation Funding Service (IFS) profile. You can edit it at any time.</p>
+<h2 class="govuk-heading-m">How Innovate UK will use your personal data</h2>
+<p>We use the personal data you give us to:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Identify any under-represented groups, investigate the reasons for this and take action to improve representation</li>
+<li>Publish aggregated and anonymised data as part of our commitment to transparency and supporting access and inclusion. For example, application and success rates.</li>
+</ul>
+<p>We’ll store your data securely and handle it in line with UK data protection legislation.</p>
+<p>If you would like to know more, including how to exercise your data protection rights,<a class="https://www.ukri.org/about-us/privacy-notice/" href="https://www.ukri.org/about-us/privacy-notice/"> please see our privacy notice.
+</a>
+<p> <p>
+<p>By clicking ‘continue’, you agree to accept the above terms and conditions.</p>
+<a href="Age" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+  Continue
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+    </a>
+
+  <div class="govuk-grid-column-one-third">
+
+
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="socio">Back</a>
+{% endblock %}
+
+{% block content %}
+<form class="form" action="caring" method="post">
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What is your current relationship status?
+      </h1>
+    </legend>
+</div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation" name="sexual-orientation" type="radio" value=“Asexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation">
+          Co-habiting
+        </label>
+        <div id="religion-2-item-hint" class="govuk-hint govuk-radios__hint">
+          Living together without being married or in a civil partnership
+        </div>
+</div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation" name="sexual-orientation" type="radio" value=“Bisexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation">
+          Married/civil partnership
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-2" name="sexual-orientation" type="radio" value=“Don’t know/unsure”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-2">
+          Separated/divorced
+        </label>
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-2" name="sexual-orientation" type="radio" value=“Homosexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-2">
+          Single
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-3" name="sexual-orientation" type="radio" value=“Heterosexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-3">
+          Widowed/surviving partner
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-4" name="sexual-orientation" type="radio" value="other" data-aria-controls="conditional-sexual-orientation-4">
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-4">
+          Prefer to self-describe
+        </label>
+</div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sexual-orientation-4">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-description">
+            How would you describe your relationship status? (optional)
+          </label>
+</div>
+          <input class="govuk-input govuk-!-width-one-half" id="other-description" name="other-description" type="text"></div>
+
+</div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-6" name="sexual-orientation" type="radio" value="skip">
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-6">
+          Prefer not to say
+        </label>
+</div>
+        <div class="govuk-inset-text">
+          You are asked to complete your relationship status, rather than only a legal marital or civil partnership status. This will help us identify any disproportionately under-represented groups.
+        </div>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Save and continue"
+        }) }}
+
+{% endblock %}

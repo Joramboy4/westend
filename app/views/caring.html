@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/marriage">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <form class="form" action="caring-answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+               Do you have caring responsibilities for any infants, children or adults?
+
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability" name="disability" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="disability">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-2" name="disability" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="disability-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-4" name="disability" type="radio" value="skip">
+              <label class="govuk-label govuk-radios__label" for="disability-4">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+<div class="govuk-inset-text">
+  Knowing of any caring responsibilities will help to tailor services and support, building a more accessible system for all.
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

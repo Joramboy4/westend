@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/Ethnicity">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "what is your gender?",
+  fieldset: {
+    legend: {
+      text: "What is your sex?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "Female"
+    },
+    {
+      value: "scotland",
+      text: "Intersex
+      (People who naturally have biological traits which do not match what is typically identified as male or female) "
+
+    },
+    {
+      value: "wales",
+      text: "Male"
+    },
+
+    {
+      divider: "or"
+    },
+    {
+      value: "abroad",
+      text: "Prefer not to say"
+    }
+  ]
+}) }}
+
+      <form class="form" action="/Assignment" method="post">
+
+        <div class="govuk-inset-text">
+          For this question, you are asked to complete your sex, rather than gender, as the Equality Act 2010 lists sex as a protected characteristic.
+        </div>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+
+
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="caring">Back</a>
+{% endblock %}
+
+{% block content %}
+<form class="form" action="education" method="post">
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        How many hours of care do you provide a week?
+      </h1>
+    </legend>
+
+</div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation" name="sexual-orientation" type="radio" value=“Asexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation">
+          9 hours a week or less
+        </label>
+
+</div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation" name="sexual-orientation" type="radio" value=“Bisexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation">
+          10-19 hours a week
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-2" name="sexual-orientation" type="radio" value=“Don’t know/unsure”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-2">
+          20-34 hours a week
+        </label>
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-2" name="sexual-orientation" type="radio" value=“Homosexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-2">
+          35-49 hours a week
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-3" name="sexual-orientation" type="radio" value=“Heterosexual”>
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-3">
+          50 hours or more a week
+        </label>
+
+</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-4" name="sexual-orientation" type="radio" value="other" data-aria-controls="conditional-sexual-orientation-4">
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-4">
+          Other
+        </label>
+</div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sexual-orientation-4">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-description">
+            State number of hour (optional)
+          </label>
+</div>
+          <input class="govuk-input govuk-!-width-one-half" id="other-description" name="other-description" type="text"></div>
+
+</div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sexual-orientation-6" name="sexual-orientation" type="radio" value="skip">
+        <label class="govuk-label govuk-radios__label" for="sexual-orientation-6">
+          Prefer not to say
+        </label>
+      </div>
+    </div>
+
+
+
+
+<div class="govuk-inset-text">
+If you share caring responsibilities with others, only include the number of hours you are caring for someone.
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}
